@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Financial Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Personal Financial Dashboard</h1>
+    <p>Track your income, spending, savings, and goals in one place.</p>
+  </header>
+
+  <main class="dashboard">
+    <section class="card">
+      <h2>Monthly Snapshot</h2>
+      <div class="grid two-col">
+        <label>Income ($)<input id="income" type="number" min="0" step="0.01" value="6000" /></label>
+        <label>Fixed Expenses ($)<input id="fixed" type="number" min="0" step="0.01" value="2200" /></label>
+        <label>Variable Expenses ($)<input id="variable" type="number" min="0" step="0.01" value="1100" /></label>
+        <label>Debt Payments ($)<input id="debt" type="number" min="0" step="0.01" value="450" /></label>
+      </div>
+    </section>
+
+    <section class="card metrics">
+      <h2>Key Metrics</h2>
+      <div class="kpi-grid">
+        <article><h3>Net Cash Flow</h3><p id="netCash">$0.00</p></article>
+        <article><h3>Savings Rate</h3><p id="savingsRate">0%</p></article>
+        <article><h3>Emergency Fund Progress</h3><p id="emergencyProgress">0%</p></article>
+        <article><h3>Debt-to-Income Ratio</h3><p id="dtiRatio">0%</p></article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Spending Breakdown</h2>
+      <div class="grid two-col">
+        <label>Housing (%)<input id="housing" type="number" min="0" max="100" value="35" /></label>
+        <label>Food (%)<input id="food" type="number" min="0" max="100" value="15" /></label>
+        <label>Transportation (%)<input id="transport" type="number" min="0" max="100" value="12" /></label>
+        <label>Utilities (%)<input id="utilities" type="number" min="0" max="100" value="8" /></label>
+        <label>Entertainment (%)<input id="entertainment" type="number" min="0" max="100" value="10" /></label>
+        <label>Other (%)<input id="other" type="number" min="0" max="100" value="20" /></label>
+      </div>
+      <p id="breakdownNote" class="note"></p>
+    </section>
+
+    <section class="card">
+      <h2>Goals</h2>
+      <div class="grid two-col">
+        <label>Emergency Fund Target ($)<input id="emergencyTarget" type="number" min="0" step="0.01" value="18000" /></label>
+        <label>Current Emergency Fund ($)<input id="emergencyCurrent" type="number" min="0" step="0.01" value="9000" /></label>
+        <label>Retirement Contribution ($/mo)<input id="retirementContribution" type="number" min="0" step="0.01" value="600" /></label>
+        <label>Investment Return (% annual)<input id="annualReturn" type="number" min="0" step="0.1" value="7" /></label>
+      </div>
+      <p id="projection" class="note"></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>Tip: Adjust values to match your real monthly numbers for better planning.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
